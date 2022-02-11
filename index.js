@@ -11,3 +11,23 @@ var person = {
     age: 22
 };
 console.log(person);
+var fruits = ['Apple', 'Banana', 21];
+// const book = ['business', 1500, false];
+var book = [
+    'business', 1500, false
+];
+// use enum
+// 列挙型（3つ以上のフラグがあるときに使用する） 
+var CoffeeSize;
+(function (CoffeeSize) {
+    CoffeeSize["SHORT"] = "SHORT";
+    CoffeeSize["TALL"] = "TALL";
+    CoffeeSize["GRANDE"] = "GRANDE";
+    CoffeeSize["VENTI"] = "VENTI";
+})(CoffeeSize || (CoffeeSize = {}));
+var coffee = {
+    hot: true,
+    size: CoffeeSize.TALL
+};
+coffee.size = CoffeeSize.SHORT;
+console.log(coffee);
