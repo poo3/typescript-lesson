@@ -51,3 +51,13 @@ let banana = 'banana'
 banana = anything
 
 console.log(banana)
+
+// use union type
+// 複数の型を受け入れることができる
+// 数字、文字列など何でもごちゃまぜで入れれる
+
+let unionType: number | string = 10
+unionType = "hello"
+unionType.toUpperCase()
+
+console.log(unionType.toUpperCase())
