@@ -40,3 +40,14 @@ const coffee = {
 coffee.size = CoffeeSize.SHORT;
 
 console.log(coffee)
+
+// use any type
+// anyなるだけ使わないようにするのがいい
+
+let anything: any = true;
+anything = { name: 'hogehoge', age: 1000 }
+
+let banana = 'banana'
+banana = anything
+
+console.log(banana)

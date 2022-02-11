@@ -31,3 +31,10 @@ var coffee = {
 };
 coffee.size = CoffeeSize.SHORT;
 console.log(coffee);
+// use any type
+// anyなるだけ使わないようにするのがいい
+var anything = true;
+anything = { name: 'hogehoge', age: 1000 };
+var banana = 'banana';
+banana = anything;
+console.log(banana);
