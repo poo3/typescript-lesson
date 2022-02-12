@@ -61,3 +61,8 @@ function add(num1, num2) {
     return num1 + num2;
 }
 console.log(add(100, 1000));
+// use void for function
+function sayHello() {
+    console.log("Hello!");
+}
+console.log(sayHello());

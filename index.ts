@@ -92,3 +92,11 @@ function add(num1: number, num2: number): number {
 }
 
 console.log(add(100, 1000));
+
+// use void for function
+
+function sayHello(): void {
+  console.log("Hello!");
+}
+
+console.log(sayHello());
