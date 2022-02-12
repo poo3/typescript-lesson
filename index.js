@@ -1,19 +1,20 @@
-var hasValue = false;
-var count = 10;
-var float = 3.14;
-var negative = -0.12;
-var single = "hello";
-var double = "hello";
-var back = "hello";
+"use strict";
+let hasValue = false;
+let count = 10;
+let float = 3.14;
+let negative = -0.12;
+let single = "hello";
+let double = "hello";
+let back = "hello";
 console.log(hasValue);
-var person = {
+const person = {
     name: "tarou",
-    age: 22
+    age: 22,
 };
 console.log(person);
-var fruits = ["Apple", "Banana", 21];
+const fruits = ["Apple", "Banana", 21];
 // const book = ['business', 1500, false];
-var book = ["business", 1500, false];
+const book = ["business", 1500, false];
 // use enum
 // 列挙型（3つ以上のフラグがあるときに使用する）
 var CoffeeSize;
@@ -23,36 +24,36 @@ var CoffeeSize;
     CoffeeSize["GRANDE"] = "GRANDE";
     CoffeeSize["VENTI"] = "VENTI";
 })(CoffeeSize || (CoffeeSize = {}));
-var coffee = {
+const coffee = {
     hot: true,
-    size: CoffeeSize.TALL
+    size: CoffeeSize.TALL,
 };
 coffee.size = CoffeeSize.SHORT;
 console.log(coffee);
 // use any type
 // anyなるだけ使わないようにするのがいい
-var anything = true;
+let anything = true;
 anything = { name: "hogehoge", age: 1000 };
-var banana = "banana";
+let banana = "banana";
 banana = anything;
 console.log(banana);
 // use union type
 // 複数の型を受け入れることができる
 // 数字、文字列など何でもごちゃまぜで入れれる
-var unionType = 10;
+let unionType = 10;
 unionType = "hello";
 unionType.toUpperCase();
 console.log(unionType.toUpperCase());
 // use Literal
 // 指定した値のみを格納できる変数を作成
-var appple = "apple";
-var literal = "literal";
+const appple = "apple";
+const literal = "literal";
 // 3つの文字列のどれかしかいれられない
-var clothSize = "large";
+let clothSize = "large";
 console.log(clothSize);
-var macSet = {
+const macSet = {
     drink: "M",
-    poteto: "L"
+    poteto: "L",
 };
 console.log(macSet);
 // set type for function
@@ -68,24 +69,24 @@ function sayHello() {
 console.log(sayHello());
 // arrow function
 // 関数宣言時以外の場合
-var anotherAdd = function (num1, num2) {
+const anotherAdd = function (num1, num2) {
     return num1 + num2;
 };
-var doubleNumber = function (num) { return num * 2; };
+const doubleNumber = (num) => num * 2;
 console.log(anotherAdd(10, 100));
 console.log(doubleNumber(100));
 // about callback function
 // コールバック関数にも型注釈をつけることができる
 function printDoubleNumber(num, cb) {
-    var doubleNum = cb(num * 2);
+    const doubleNum = cb(num * 2);
     console.log(doubleNum);
 }
-printDoubleNumber(10, function (num) { return num * 2; });
+printDoubleNumber(10, (num) => num * 2);
 // about unknown
 // 使用するときは型を保証して上げる必要がある
-var unknownInput;
-var anyInput;
-var text;
+let unknownInput;
+let anyInput;
+let text;
 unknownInput = 10;
 unknownInput = "unknown";
 unknownInput = true;
