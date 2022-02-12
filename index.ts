@@ -100,3 +100,18 @@ function sayHello(): void {
 }
 
 console.log(sayHello());
+
+// arrow function
+// 関数宣言時以外の場合
+
+const anotherAdd: (num1: number, num2: number) => number = function (
+  num1,
+  num2
+) {
+  return num1 + num2;
+};
+
+const doubleNumber: (num: number) => number = (num) => num * 2;
+
+console.log(anotherAdd(10, 100));
+console.log(doubleNumber(100));
