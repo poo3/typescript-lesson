@@ -147,3 +147,11 @@ if (typeof unknownInput === "string") {
 }
 
 console.log(text);
+
+// about never type
+// 決して何も返さない宣言
+
+function error(message: string): never {
+  throw new Error(message);
+}
+console.log(error("This is an error"));

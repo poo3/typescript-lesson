@@ -94,7 +94,13 @@ unknownInput = "text unkonwnInput";
 text = anyInput;
 // 　text = unknownInput はerrorになる
 // unknownは下記のように型を保証して使用して上げる必要がある
-if (typeof unknownInput === "number") {
+if (typeof unknownInput === "string") {
     text = unknownInput;
 }
 console.log(text);
+// about never type
+// 決して何も返さない宣言
+function error(message) {
+    throw new Error(message);
+}
+console.log(error("This is an error"));
