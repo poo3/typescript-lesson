@@ -115,3 +115,13 @@ const doubleNumber: (num: number) => number = (num) => num * 2;
 
 console.log(anotherAdd(10, 100));
 console.log(doubleNumber(100));
+
+// about callback function
+// コールバック関数にも型注釈をつけることができる
+
+function printDoubleNumber(num: number, cb: (num: number) => number) {
+  const doubleNum = cb(num * 2);
+  console.log(doubleNum);
+}
+
+printDoubleNumber(10, (num) => num * 2);

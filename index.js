@@ -74,3 +74,10 @@ var anotherAdd = function (num1, num2) {
 var doubleNumber = function (num) { return num * 2; };
 console.log(anotherAdd(10, 100));
 console.log(doubleNumber(100));
+// about callback function
+// コールバック関数にも型注釈をつけることができる
+function printDoubleNumber(num, cb) {
+    var doubleNum = cb(num * 2);
+    console.log(doubleNum);
+}
+printDoubleNumber(10, function (num) { return num * 2; });
