@@ -81,3 +81,20 @@ function printDoubleNumber(num, cb) {
     console.log(doubleNum);
 }
 printDoubleNumber(10, function (num) { return num * 2; });
+// about unknown
+// 使用するときは型を保証して上げる必要がある
+var unknownInput;
+var anyInput;
+var text;
+unknownInput = 10;
+unknownInput = "unknown";
+unknownInput = true;
+unknownInput = "text unkonwnInput";
+// anyはなんにでも自由に使える
+text = anyInput;
+// 　text = unknownInput はerrorになる
+// unknownは下記のように型を保証して使用して上げる必要がある
+if (typeof unknownInput === "number") {
+    text = unknownInput;
+}
+console.log(text);

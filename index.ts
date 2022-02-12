@@ -125,3 +125,25 @@ function printDoubleNumber(num: number, cb: (num: number) => number) {
 }
 
 printDoubleNumber(10, (num) => num * 2);
+
+// about unknown
+// 使用するときは型を保証して上げる必要がある
+
+let unknownInput: unknown;
+let anyInput: any;
+let text: string;
+unknownInput = 10;
+unknownInput = "unknown";
+unknownInput = true;
+unknownInput = "text unkonwnInput";
+
+// anyはなんにでも自由に使える
+text = anyInput;
+// 　text = unknownInput はerrorになる
+// unknownは下記のように型を保証して使用して上げる必要がある
+
+if (typeof unknownInput === "string") {
+  text = unknownInput;
+}
+
+console.log(text);
