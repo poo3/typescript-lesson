@@ -45,3 +45,10 @@ var unionType = 10;
 unionType = "hello";
 unionType.toUpperCase();
 console.log(unionType.toUpperCase());
+// use Literal
+// 指定した値のみを格納できる変数を作成
+var appple = 'apple';
+var literal = 'literal';
+// 3つの文字列のどれかしかいれられない
+var clothSize = 'large';
+console.log(clothSize);

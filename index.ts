@@ -61,3 +61,14 @@ unionType = "hello"
 unionType.toUpperCase()
 
 console.log(unionType.toUpperCase())
+
+// use Literal
+// 指定した値のみを格納できる変数を作成
+
+const appple: 'apple' = 'apple'
+const literal = 'literal'
+
+// 3つの文字列のどれかしかいれられない
+let clothSize: 'small' | 'medium' | 'large' = 'large'
+
+console.log(clothSize)
