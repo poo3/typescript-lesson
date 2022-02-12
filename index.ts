@@ -81,3 +81,14 @@ const macSet: {
   drink: "M",
   poteto: "L",
 };
+
+console.log(macSet);
+
+// set type for function
+
+// 基本的に引数には型をつけるようにする（つけないとany型になるため）
+function add(num1: number, num2: number): number {
+  return num1 + num2;
+}
+
+console.log(add(100, 1000));
